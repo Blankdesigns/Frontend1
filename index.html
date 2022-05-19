@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/style.css"/>
+
+        <title>color flipper</title>
+    </head>
+    <body>
+        <section class="color-flipper" id="color-flipper">
+            <h3>Colour Flipper</h3>
+            <div class="container">
+                <h4>Background color: <span class="cc">bisque</span></h4>
+                <div class="btns">
+                    <button class="btn btn-hero" id="primary-color">primary colors</button>
+                    <button class="btn btn-hero" id="secondary-color">Secondary colors</button>
+                    <button class="btn btn-hero" id="random-color">random colors</button>
+                </div>
+            </div>
+            <p id="r"></p>
+        </section>
+        <section class="alphabets" id="alphabets">
+            <h3>Iterate the English Alphabets</h3>
+            <div class="alphabet-container">
+                <div class="display-alphabet"></div>
+            </div>
+            <div class="btns">
+                <button class="btn begin">Begining</button>
+                <button class=" btn decrease">Decrease</button>
+                <button class="btn random">Random</button>
+                <button class="btn increase">Increase</button>
+                <button class="btn end">Ending</button>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <h3>reviews</h3>
+            <div class="reviewee-container">
+                <img class="images" id="img-review" src="./images/john.png" alt="reviwee"/>
+                <p id="id-info"></p>
+                <p class="review-deets">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, eos!
+                </p>
+            </div>
+            <div class="btns">
+                <button type="button" class="btn previous-btn">previous reviwee</button>
+                <button type="button" class="btn random-btn">any reviwee</button>
+                <button type="button" class="btn next-btn">Next reviwee</button>
+            </div>
+        </section>
+        <section class="navbar">
+            <nav id="main-nav">
+                <h3>Frontend Projects</h3>
+                <div class="nav-btn">
+                    <button id="menu-btn" class="btn">
+                        <span class="plus">+</span><span class="minus">-</span>
+                    </button>
+                    <div class="change-menu">
+                        <span class="menu-a">dynamic menu</span>
+                        <span class="menu-b">static menu</span>
+                    </div>
+                </div>
+                <div class="nav-container">
+                    <ul class="links">
+                        <li>tester</li>
+                        <li>
+                            color flipper
+                            <ul>
+                                <li><a href="index.html">simple</a></li>
+                                <li><a href="hex.html">hex</a></li>
+                            </ul>
+                        </li>
+                        <a href="#alphabets"><li>alphabets</li></a>
+                        <a href="#reviews"><li>reviews</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <section class="modal">
+            <div class="modal-container">
+                <div id="modal-display">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <button class="btn close">x</button>
+                <a href="#contact-form" rel="noopener noreferrer">
+                    <button id="contact-btn" class="btn">book an appointment</button>
+                </a>
+            </div>
+        </section>
+        <section class="questions" id="question-section">
+            <h3>Questions panel</h3>
+            <div class="question-box">
+                <div class="question-title">
+                    <h4>question</h4>
+                    <button class="btn questions-btn">
+                    <span class="plus">+</span><span class="minus">-</span>
+                </button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Doloribus neque corrupti culpa laboriosam modi debitis saepe, 
+                    consequatur adipisci sit maiores exercitationem dolor eos tempore nihil dolorem, 
+                    similique sint necessitatibus sunt.</p>
+            </div>
+            <div class="question-box">
+                <div class="question-title">
+                    <h4>question</h4>
+                    <button class="btn questions-btn">
+                    <span class="plus">+</span><span class="minus">-</span>
+                </button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Doloribus neque corrupti culpa laboriosam modi debitis saepe, 
+                    consequatur adipisci sit maiores exercitationem dolor eos tempore nihil dolorem, 
+                    similique sint necessitatibus sunt.</p>
+            </div>
+            <div class="question-box">
+                <div class="question-title">
+                    <h4>question</h4>
+                    <button class="btn questions-btn">
+                    <span class="plus">+</span><span class="minus">-</span>
+                </button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Doloribus neque corrupti culpa laboriosam modi debitis saepe, 
+                    consequatur adipisci sit maiores exercitationem dolor eos tempore nihil dolorem, 
+                    similique sint necessitatibus sunt.</p>
+            </div>
+        </section>
+        <section id="video">
+            <h3>video</h3>
+            <video  autoplay loop muted class="run-man">
+                <source src="./video.mp4" type="video/mp4"/>
+            </video>
+            <button class="switch-btn">
+                <span>play</span>
+                <span>pause</span>
+                <span class="switch"></span>
+            </button>
+        </section>
+        <section class="contact-form get-in-touch" id="contact-form">
+            <h3>fill form</h3>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Reach Us</legend>
+                    <label for="f-name">First Name</label><br/>
+                    <input type="text" id="f-name"/><br>
+                    <label for="l-name">Last Name</label><br>
+                    <input type="text" id="l-name"/><br>
+                    <label for="email">Email Address</label><br>
+                    <input type="text" id="email"/><br>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" id="phone"/><br>
+                    <label for="message">Comment</label><br>
+                    <textarea name="comment" id="message" cols="30" rows="10"></textarea><br>
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>

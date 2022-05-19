@@ -1,0 +1,402 @@
+/* general */
+html{
+    scroll-behavior: smooth;
+}
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* main{
+    position: relative;
+    min-height: 100vh;
+} */
+section:nth-child(even) {
+    background-color: #ccc;
+}
+section:not(.navbar) {
+    border-bottom: 1px rgb(178, 37, 115) solid;
+    padding: 20px 5px;
+}
+section h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn {
+    font-size: large;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 5px;
+    border: 2px #000 solid;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 10px 0;
+}
+/* end of general */
+
+/* color flipper */
+.color-flipper {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+    margin-top: 89px;
+}
+.container {
+    text-align: center;
+}
+.container h4 {
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+#btn-color:hover {
+    background-color: black;
+    color: #fff;
+}
+/* end of color fipper */
+
+/* alphabets */
+.alphabets h3 {
+    text-transform: uppercase;
+    background-color: #fff;
+}
+.display-alphabet {
+    display: none;
+    color: #fff;
+    background-color: #000;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 25px;
+    border-radius: 5px;
+}
+.show-display-alphabet {
+    display: block;
+}
+.alphabet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end of alphabets */
+
+/* reviews */
+.reviewee-container {
+    width: 75%;
+    margin: auto;
+    background-color: rgb(234, 231, 130);
+    /* overflow: hidden; */
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 1rem;
+}
+.reviewee-container img {
+    width: 100%;
+}
+#id-info {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+/* end of reviews */
+
+/* navbar */
+
+.navbar {
+    padding: 0 0 5px;
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+nav h3 {
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(99, 170, 138);
+    margin: 0 0 5px;
+    padding: 5px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav li {
+    list-style-type: none;
+    padding: 5px;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+nav a:hover {
+    color: #fff;
+}
+.hide .plus{
+    display: none;
+}
+.hide #menu-btn .minus {
+    display: inline;
+}
+#menu-btn {
+    float: right;
+    margin-right:5px;
+    clear: both;
+}
+#menu-btn .minus {
+    display: none;
+}
+/* .nav-btn::after{
+    clear: both;
+    content: '';
+    display: table;
+} */
+.change-menu{
+    display: block;
+    height: 100%;
+    margin: auto;
+    left: 25%;
+    width: auto;
+    /* position: absolute; */
+    padding: 5px;
+}
+.nav-container {
+    display: none;
+}
+.show .nav-container {
+    display: block;
+}
+.nav-container ul li {
+    position: relative;
+}
+.nav-container ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgb(17, 144, 102);
+    /* width: 992px; */
+}
+.nav-container ul li:hover ul {
+    display: block;
+}
+.menu-a{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+    margin: 0 5px;
+    background-color: rgb(216, 119, 119);
+    cursor: pointer;
+    /* text-align: center; */
+    line-height: 100px;
+}
+.menu-b{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+    margin: 0 5px;
+    background-color: rgb(216, 119, 119);
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+}
+/* .fixed-nav{
+    position: fixed;
+    background-color: pink;
+    width: 100%;
+} */
+.links{
+    display: block;
+}
+.links .links-list a{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background-color: rgb(88, 100, 100);
+}
+/* end of navbar */
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(17, 144, 102, 0.5);
+}
+.show-modal{
+    display: block;
+}
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.modal button {
+    padding: 5px;
+}
+#modal-display {
+    margin: 20px;
+    padding: 1em;
+    border-radius: 1rem;
+    background-color: rgb(127, 184, 218);
+    font-family: 'Courier New', Courier, monospace;
+}
+/* end of modal */
+
+/* questions */
+.question-box {
+    border: 1px solid rgb(219, 60, 60);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+.questions-btn .minus {
+    display: none;
+}
+.hide .question-title .questions-btn .minus {
+    display: inline;
+}
+.hide .question-title .questions-btn .plus {
+    display: none;
+}
+.question-box p {
+    display: none;
+}
+.hide p {
+    display: block;
+}
+.question-title::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.question-title h3 {
+    float: left;
+}
+.question-title .btn {
+    float: right;
+}
+/* .question-title .btn::after{
+    clear: both;
+} */
+/* end_of_questions */
+
+/* video */
+section#video{
+    position: relative;
+}
+#video h3 {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 25%;
+}
+#video video {
+    width: 100%;
+    z-index: -1;
+}
+#video::after{
+    background-color: rgb(0, 0, 0, 0.7);
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.switch-btn {
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition: vall 0.3s linear;
+    z-index: 1;
+  }
+  .switch-btn span {
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: rgb(90, 116, 231);
+  }
+  .switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(90, 116, 231);;
+    border-radius: 5px;
+    margin: 0;
+    display: block;
+    transition: all 0.3s linear;
+  }
+  .slide .switch {
+    left: 50%;
+  }
+/* end of video */
+
+/* contact_form */
+.contact-form fieldset{
+    padding: 5px;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    border: 2px solid #000;
+    background-color: rgb(240, 240, 240);
+    padding: 2px;
+}
+/* end_of_contact_form */
+
+
+@media screen and (min-width: 800px) {
+    /* nav */
+    .nav-container{
+        display: block;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #menu-btn{
+        display: none;
+    }
+    .change-menu{
+        display: table;
+        clear: both;
+        content: '';
+    }
+    /* nav */
+}
