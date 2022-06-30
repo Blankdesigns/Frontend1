@@ -313,3 +313,100 @@ switchBtn.addEventListener('click', () => {
     }
 });
 // enf of video
+
+//tabs
+const about = document.querySelector('.about');
+const contents = about.querySelectorAll('.content');
+const tabBtns = about.querySelectorAll('.tab-btn');
+
+about.addEventListener('click', function(e){
+    const id = e.target.dataset.id;
+
+    if(id) {
+        tabBtns.forEach(function(btn) {
+            btn.classList.remove("active");
+            e.target.classList.add("active");
+        });
+        contents.forEach(function(content) {
+            content.classList.remove("active");
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    }
+})
+//end of tabs
+
+//count down timer
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  const weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+const giveaway = document.querySelector(".giveaway");
+const deadline = document.querySelector(".deadline");
+const timers = document.querySelectorAll(".deadline-format h4");
+
+const temp = new Date();
+const futureYear = temp.getFullYear();
+const futureMonth = temp.getMonth();
+const futureDay = temp.getDate();
+const futureDate = new Date(futureYear, futureMonth, futureDay + 10, 11, 30, 00);
+
+function displayCountdown() {
+    const today = new Date();
+    console.log(today);
+    const timeDifference = futureDate.getTime() - today.getTime();
+    
+    //times in milliseconds
+    const secs = 1000;
+    const min = 60 * 1000;
+    const hour = 60* 60 *1000;
+    const day = 24 * 60 * 60 * 1000;
+    
+    //for countdown left
+    const daysLeft = Math.floor(timeDifference / day);
+    const hoursLeft = Math.floor((timeDifference % day) / hour);
+    const minsLeft = Math.floor((timeDifference % hour) / min);
+    const secsLeft = Math.floor((timeDifference % min) / secs);
+    // console.log(hoursLeft);
+    const timerArray = [daysLeft, hoursLeft, minsLeft, secsLeft];
+
+    //add pre-zero to single digits
+    function format(digit) {
+        if(digit < 10) {
+           return digit = `0${digit}`;
+        }
+        return digit;
+    }
+
+    timers.forEach(function(time, index) {
+        time.innerHTML = format(timerArray[index]);
+    });
+
+    if (timeDifference < 0) {
+        clearInterval(countdown);
+        deadline.innerHTML = `<h4 class="expired">sorry, this giveaway has expired!</h4>`;
+      }
+}
+displayCountdown();
+let countdown = setInterval(displayCountdown, 1000);
+console.log(countdown);
+//end of count down timer
