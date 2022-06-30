@@ -100,11 +100,11 @@ section h3 {
 .reviewee-container img {
     width: 100%;
 }
-#id-info {
+/* #id-info {
     text-align: center;
     text-transform: capitalize;
     font-weight: bold;
-}
+} */
 /* end of reviews */
 
 /* navbar */
@@ -149,7 +149,7 @@ nav a:hover {
 }
 #menu-btn {
     float: right;
-    margin-right:5px;
+    margin: 0 5px 0 0;
     clear: both;
 }
 #menu-btn .minus {
@@ -192,23 +192,23 @@ nav a:hover {
     padding: 10px;
     border-radius: 50%;
     width: 115px;
-    height: 115px;
+    height: 30px;
     margin: 0 5px;
     background-color: rgb(216, 119, 119);
     cursor: pointer;
-    /* text-align: center; */
-    line-height: 100px;
+    text-align: center;
+    /* line-height: 100px; */
 }
 .menu-b{
     display: inline-block;
     padding: 10px;
     border-radius: 50%;
     width: 115px;
-    height: 115px;
+    height: 30px;
     margin: 0 5px;
     background-color: rgb(216, 119, 119);
     cursor: pointer;
-    line-height: 100px;
+    /* line-height: 100px; */
     text-align: center;
 }
 /* .fixed-nav{
@@ -367,6 +367,41 @@ section#video{
     left: 50%;
   }
 /* end of video */
+
+/* tabs */
+.content {
+    display: none;
+}
+.active{
+    display: block;
+}
+.btn-container{
+    display: flex;
+}
+/* end of tabs */
+
+/* count down timer */
+.gift-info {
+    line-height: 1cm;
+    text-align: center;
+}
+.giveaway {
+    text-transform: uppercase;
+}
+.deadline{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-content: flex-start; */
+}
+.deadline-format{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80px
+}
+/* end of count down timer */
 
 /* contact_form */
 .contact-form fieldset{
